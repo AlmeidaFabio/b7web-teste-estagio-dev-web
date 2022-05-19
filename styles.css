@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto';
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main header {
+    height: 50px;
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff; 
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 30px;
+}
+
+main header .menus-area {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+main header nav ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+main header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-1 {
+    margin-right: 30px;
+}
+
+.banners {
+    flex: 1;
+}
+
+.banner-1, .banner-2 {
+    height: calc((100vh - 50px)/2);
+}
+
+.banner-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(187, 79, 182);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+}
+
+.content .leftside {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 5rem;
+}
+
+.content .rightside {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-1 .leftside {
+    color: #fff;
+}
+
+.banner-1 .leftside h1,
+.banner-2 .leftside h1 {
+    font-size: 3rem;
+}
+
+.banner-1 .leftside p,
+.banner-2 .leftside p {
+    font-size: 1.2rem;
+}
+
+button {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    outline: 0;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all ease .5s;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+.banner-1 .leftside span {
+    font-size: 0.7rem;
+}
+
+.banner-1 .leftside span a {
+    color: #fff;
+}
+
+.banner-1 .rightside img {
+    height: 300px;
+}
+
+.banner-2 {
+    display: flex;
+    justify-content: center;
+    background: rgba(35, 35, 186, 0.886);
+    background-image: url('/assets/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-2 .leftside {
+    color: rgb(39, 233, 0);
+    width: 50%;
+}
+
+.banner-2 .leftside button {
+    background: rgb(39, 233, 0);
+    color: rgba(35, 35, 186, 0.886);
+}
+
+@media(max-width:1140px) {
+    .banner-1 .leftside h1,
+    .banner-2 .leftside h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-1 .leftside p,
+    .banner-2 .leftside p {
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width:900px) {
+    .logo {
+        width: 100px;
+    }
+
+    main header nav ul li a {
+        font-size: .8rem;
+    }
+
+    .banner-1 .leftside h1,
+    .banner-2 .leftside h1 {
+        font-size: 2.3rem;
+    }
+
+    .banner-1 .leftside span {
+        font-size: 0.7rem;
+    }
+
+    .banner-1 .rightside img {
+        height: 250px;
+    }
+}
+
+@media(max-width:750px) {
+    .banner-1 .rightside img {
+        margin-left: -150px;
+    }
+
+    .banner-1 .leftside {
+        z-index: 99;
+        text-shadow: 0px 0px 4px #000;
+    }
+
+    .banner-1 .leftside,
+    .banner-2 .leftside {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+
+    main header nav ul li a {
+        font-size: .7rem;
+    }
+
+    .banner-1 .leftside button,
+    .banner-2 .leftside button {
+        font-size: .9rem;
+    }
+
+    .banner-2 .leftside p {
+        color: #fff;
+    }
+}
